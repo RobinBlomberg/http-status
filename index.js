@@ -1,4 +1,4 @@
-export const HttpStatus = {
+const HttpStatus = {
   INFO_CONTINUE: 100,
   INFO_SWITCHING_PROTOCOLS: 101,
   INFO_PROCESSING: 102,
@@ -62,4 +62,8 @@ export const HttpStatus = {
   SERVER_LOOP_DETECTED: 508,
   SERVER_NOT_EXTENDED: 510,
   SERVER_NETWORK_AUTHENTICATION_REQUIRED: 511,
+};
+
+module.exports = {
+  HttpStatus,
 };
