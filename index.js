@@ -1,4 +1,4 @@
-export const Statuses = {
+const Statuses = {
   Info: {
     CONTINUE: 100,
     SWITCHING_PROTOCOLS: 101,
@@ -74,7 +74,7 @@ export const Statuses = {
   },
 };
 
-export const StatusTexts = {
+const StatusTexts = {
   100: 'Continue',
   101: 'Switching Protocols',
   102: 'Processing',
@@ -138,4 +138,9 @@ export const StatusTexts = {
   508: 'Loop Detected',
   510: 'Not Extended',
   511: 'Network Authentication Required',
+};
+
+module.exports = {
+  Statuses,
+  StatusTexts,
 };
