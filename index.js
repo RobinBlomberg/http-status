@@ -1,11 +1,11 @@
-const Statuses = {
-  Info: {
+const status = {
+  info: {
     CONTINUE: 100,
     SWITCHING_PROTOCOLS: 101,
     PROCESSING: 102,
     EARLY_HINTS: 103,
   },
-  Success: {
+  success: {
     OK: 200,
     CREATED: 201,
     ACCEPTED: 202,
@@ -17,7 +17,7 @@ const Statuses = {
     ALREADY_REPORTED: 208,
     IM_USED: 226,
   },
-  Redirect: {
+  redirect: {
     MULTIPLE_CHOICES: 300,
     MOVED_PERMANENTLY: 301,
     FOUND: 302,
@@ -28,7 +28,7 @@ const Statuses = {
     TEMPORARY: 307,
     PERMANENT: 308,
   },
-  ClientError: {
+  clientError: {
     BAD_REQUEST: 400,
     UNAUTHORIZED: 401,
     PAYMENT_REQUIRED: 402,
@@ -59,7 +59,7 @@ const Statuses = {
     REQUEST_HEADER_FIELDS_TOO_LARGE: 431,
     UNAVAILABLE_FOR_LEGAL_REASONS: 451,
   },
-  ServerError: {
+  serverError: {
     INTERNAL_SERVER_ERROR: 500,
     NOT_IMPLEMENTED: 501,
     BAD_GATEWAY: 502,
@@ -74,7 +74,7 @@ const Statuses = {
   },
 };
 
-const StatusTexts = {
+const statusText = {
   100: 'Continue',
   101: 'Switching Protocols',
   102: 'Processing',
@@ -116,7 +116,7 @@ const StatusTexts = {
   415: 'Unsupported Media Type',
   416: 'Range Not Satisfiable',
   417: 'Expectation Failed',
-  418: 'I\'m A Teapot',
+  418: "I'm A Teapot",
   421: 'Misdirected Request',
   422: 'Unprocessable Entity',
   423: 'Locked',
@@ -141,6 +141,6 @@ const StatusTexts = {
 };
 
 module.exports = {
-  Statuses,
-  StatusTexts,
+  status,
+  statusText,
 };

@@ -1,18 +1,18 @@
 export type Status =
-  | StatusDict['Info'][keyof StatusDict['Info']]
-  | StatusDict['Success'][keyof StatusDict['Success']]
-  | StatusDict['Redirect'][keyof StatusDict['Redirect']]
-  | StatusDict['ClientError'][keyof StatusDict['ClientError']]
-  | StatusDict['ServerError'][keyof StatusDict['ServerError']];
+  | StatusDict['info'][keyof StatusDict['info']]
+  | StatusDict['success'][keyof StatusDict['success']]
+  | StatusDict['redirect'][keyof StatusDict['redirect']]
+  | StatusDict['clientError'][keyof StatusDict['clientError']]
+  | StatusDict['serverError'][keyof StatusDict['serverError']];
 
 export type StatusDict = {
-  readonly Info: {
+  readonly info: {
     readonly CONTINUE: 100;
     readonly SWITCHING_PROTOCOLS: 101;
     readonly PROCESSING: 102;
     readonly EARLY_HINTS: 103;
   };
-  readonly Success: {
+  readonly success: {
     readonly OK: 200;
     readonly CREATED: 201;
     readonly ACCEPTED: 202;
@@ -24,7 +24,7 @@ export type StatusDict = {
     readonly ALREADY_REPORTED: 208;
     readonly IM_USED: 226;
   };
-  readonly Redirect: {
+  readonly redirect: {
     readonly MULTIPLE_CHOICES: 300;
     readonly MOVED_PERMANENTLY: 301;
     readonly FOUND: 302;
@@ -35,7 +35,7 @@ export type StatusDict = {
     readonly TEMPORARY: 307;
     readonly PERMANENT: 308;
   };
-  readonly ClientError: {
+  readonly clientError: {
     readonly BAD_REQUEST: 400;
     readonly UNAUTHORIZED: 401;
     readonly PAYMENT_REQUIRED: 402;
@@ -66,7 +66,7 @@ export type StatusDict = {
     readonly REQUEST_HEADER_FIELDS_TOO_LARGE: 431;
     readonly UNAVAILABLE_FOR_LEGAL_REASONS: 451;
   };
-  readonly ServerError: {
+  readonly serverError: {
     readonly INTERNAL_SERVER_ERROR: 500;
     readonly NOT_IMPLEMENTED: 501;
     readonly BAD_GATEWAY: 502;
@@ -123,7 +123,7 @@ export type StatusTextDict = {
   readonly 415: 'Unsupported Media Type';
   readonly 416: 'Range Not Satisfiable';
   readonly 417: 'Expectation Failed';
-  readonly 418: 'I\'m A Teapot';
+  readonly 418: "I'm A Teapot";
   readonly 421: 'Misdirected Request';
   readonly 422: 'Unprocessable Entity';
   readonly 423: 'Locked';
@@ -147,6 +147,6 @@ export type StatusTextDict = {
   readonly 511: 'Network Authentication Required';
 };
 
-export const Statuses: StatusDict;
+export const status: StatusDict;
 
-export const StatusTexts: StatusTextDict;
+export const statusText: StatusTextDict;
